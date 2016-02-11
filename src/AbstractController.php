@@ -9,4 +9,11 @@
 abstract class AbstractController
 {
     abstract function preExecute();
+
+    public function getParams()
+    {
+        $params = parse_url($_SERVER['REQUEST_URL']);
+
+        return $params['query'];
+    }
 }
