@@ -9,4 +9,9 @@
 abstract class AbstractController
 {
     abstract function preExecute();
+
+    public function getUrl()
+    {
+        return $_SERVER['REQUEST_URL'];
+    }
 }
